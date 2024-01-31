@@ -34,15 +34,13 @@
 </p>
 
 <div id="score">0</div>
-<button id="button" onclick="cookieclicker()">  </button>
+<button id="button">  </button>
 <script>
-function cookieclicker(){
   let counter = 0;
   
   document.getElementById('button').onclick = () => {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
   };
-}
 </script>
 </body>

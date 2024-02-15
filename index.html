@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
 <html>
 <body style="text-align: center;">
 
@@ -39,9 +42,18 @@
 <script>
   let counter = 0;
   
-  document.getElementById('button').onclick = () => {
-    counter = counter + 1;
-    document.getElementById('score').innerText = counter;
-  };
+//   document.getElementById('button').onclick = () => {
+//     counter = counter + 1;
+//     document.getElementById('score').innerText = counter;
+//   };
+
+    let btn = $("#button");
+
+    let score = $("#score");
+    
+    btn.on("click", () => {
+        counter++;
+        score.text(counter);
+    });
 </script>
 </body>

@@ -5,10 +5,14 @@
     <title>MPortfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
 </head>
 <html>
-<body style="text-align: center;">
+<body class="body">
 
 <h1>
     MPortfolio website
@@ -21,7 +25,7 @@
     This page is just a colleciton of old projects from my classes in high school and in the future maybe college.</p>
 <p>
     <a href="https://github.com/mpot05/first-calculator-app" target="_blank">
-        <img src="/images/calc_image.png" alt="calculator-image" width="60" height="100">
+        <img id="imgbox" src="/images/calc_image.png" alt="calculator-image" width="60" height="100">
         <br>
         The first calculator app I made (It's bad)
     </a>
@@ -29,7 +33,7 @@
 <br>
 <p>
     <a href="https://github.com/mpot05/First-Hackathon" target="_blank">
-        <img src="/images/hackathon-image.png" alt="hackathon-image" width="200" height="100">
+        <img id="imgbox" src="/images/hackathon-image.png" alt="hackathon-image" width="200" height="100">
         <br>
         My first in-class Hackathon project
     </a>
@@ -42,7 +46,7 @@
 </p>
 
 <div id="score">0</div>
-<button id="button"> <img style="text-align: center;" src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
+<button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
 <script>
   let counter = 0;
   

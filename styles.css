@@ -1,6 +1,16 @@
+
+
 p {
     color: black;
-    font-style: italic;
+    text-align: center;
+    font-style: initial;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+#imgbox{
+    box-shadow: 3px 4px lightblue;
 }
 
 @keyframes funni {
@@ -10,10 +20,11 @@ p {
     75%  {background-color:aliceblue;}
     100% {background-color:orange;}
 }
-body{
+.body{
+    text-align: center;
     animation-name: funni;
     animation-duration: 100s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
+
 

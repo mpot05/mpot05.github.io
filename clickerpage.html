@@ -11,14 +11,19 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="clicker.js" defer></script>
 </head>
-<a style="padding-right: 95%; padding-top: 200%;" href="index.html">Back</a>
-<body class="body">
 
+<body class="body">
+    <div style="position: relative; width: 0; height: 0">
+        <div style="position: absolute; left: 5%; top: -50px">
+            <a style="left: 90%;" href="index.html">Back</a>
+        </div>
+    </div>
+    
 
     <h1>Fords Clicker</h1>
-    <div>
-        <button onclick="clickCookie()"> <img src="images/Haverford_H.jpeg" alt="Haverford logo"></button>
-    </div>
+    
+    <img onclick="clickCookie()" src="images/Haverford_H.jpeg" alt="Haverford logo"></img>
+    
   <p>Fords: <span id="fords-count">0</span></p>
   <button onclick="reset()">Reset</button>
 

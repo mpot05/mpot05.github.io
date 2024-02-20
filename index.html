@@ -47,6 +47,9 @@
 
 <div id="score">0</div>
 <button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
+<p>
+    <a id = "clink" href="clickerpage.html" target="_self"></a>
+</p>
 <script>
   let counter = 0;
   
@@ -58,10 +61,16 @@
     let btn = $("#button");
 
     let score = $("#score");
+
+    let clink = $("#clink")
     
     btn.on("click", () => {
         counter++;
         score.text(counter);
+
+        if (counter >= 10) {
+            clink.text("Ford Clicker")
+        }
     });
 </script>
 </body>

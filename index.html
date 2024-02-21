@@ -1,77 +1,86 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPortfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 
 </head>
 <html>
+
 <body class="body">
 
-<h1>
-    MPortfolio website
-</h1>
-<h2>
-    <a href="page2.html" target="_self"> About me</a>
-</h2>
-<p style="text-align: center">
-    Hello! If you've found this website, I'm assuming you're here to look at my code. If not I have no idea how or why you're here.
-    This page is just a colleciton of old projects from my classes in high school and in the future maybe college.</p>
-<p>
-    <a href="https://github.com/mpot05/first-calculator-app" target="_blank">
-        <img id="imgbox" src="/images/calc_image.png" alt="calculator-image" width="60" height="100">
-        <br>
-        The first calculator app I made (It's bad)
-    </a>
-</p>
-<br>
-<p>
-    <a href="https://github.com/mpot05/First-Hackathon" target="_blank">
-        <img id="imgbox" src="/images/hackathon-image.png" alt="hackathon-image" width="200" height="100">
-        <br>
-        My first in-class Hackathon project
-    </a>
-</p>
-<br>
-<p>
-    <a href="https://github.com/mpot05/MPortfolio" target="_blank">
-        Early portfolio app
-    </a>
-</p>
+    <h1>
+        <div id="header">MPortfolio</div>
+    </h1>
+    <h2>
+        <a href="page2.html" target="_self"> About me</a>
+    </h2>
+    <p style="text-align: center">
+        Hello! If you've found this website, I'm assuming you're here to look at my code. If not I have no idea how or
+        why you're here.
+        This page is just a colleciton of old projects from my classes in high school and in the future maybe college. It's also my very first time using html so it may be questionable in quality.
+    </p>
+    <div>
+        <a href="https://github.com/mpot05/first-calculator-app" target="_blank">
+            <img class="imgbox" src="/images/calc_image.png" alt="calculator-image" width="60" height="100" />
+            <p class="zoom">
+                The first calculator app I made (It's bad)
+            </p>
+        </a>
+    </div>
+    <div>
+        <a href="https://github.com/mpot05/First-Hackathon" target="_blank">
+            <img class="imgbox" src="/images/hackathon-image.png" alt="hackathon-image" width="200" height="100" />
+            <p class="zoom">
+                My first in-class Hackathon project
+            </p>
+        </a>
+    </div>
+    <p>
+        <a class="zoom" href="https://github.com/mpot05/MPortfolio" target="_blank">
+            Early portfolio app
+        </a>
+    </p>
 
-<div id="score">0</div>
-<button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
-<p>
-    <a id = "clink" href="clickerpage.html" target="_self"></a>
-</p>
-<script>
-  let counter = 0;
-  
-//   document.getElementById('button').onclick = () => {
-//     counter = counter + 1;
-//     document.getElementById('score').innerText = counter;
-//   };
+    <div id="score">0</div>
+    <button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
+    <p>
+        <a id="clink" href="clickerpage.html" target="_self"></a>
+    </p>
+    <script>
+        let counter = 0;
 
-    let btn = $("#button");
+        //   document.getElementById('button').onclick = () => {
+        //     counter = counter + 1;
+        //     document.getElementById('score').innerText = counter;
+        //   };
 
-    let score = $("#score");
+        let btn = $("#button");
 
-    let clink = $("#clink")
-    
-    btn.on("click", () => {
-        counter++;
-        score.text(counter);
+        let score = $("#score");
 
-        if (counter >= 10) {
-            clink.text("Ford Clicker")
-        }
-    });
-</script>
+        let clink = $("#clink")
+
+        btn.on("click", () => {
+            counter++;
+            score.text(counter);
+
+            if (counter >= 10) {
+                clink.text("Ford Clicker")
+            }
+        });
+    </script>
 </body>
+
 </html>

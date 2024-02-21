@@ -1,52 +1,79 @@
-
-
 p {
-    color: black;
-    text-align: center;
-    font-style: initial;
-    transition-property: width;
-    transition-duration: 1s;
-    transition-timing-function: linear;
+  color: black;
+  text-align: center;
+  font-style: initial;
+}
+.zoom {
+  transition: 0.5s;
+  font-size: inherit;
+}
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
-a:link {
-    color: black;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:visited {
-    color: black;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:active {
-    color: brown;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-#imgbox{
-    box-shadow: 3px 4px lightblue;
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: 0.5s;
+  position: relative;
+}
+
+a:active {
+  color: brown;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.imgbox {
+  transition: all 0.5s;
+  width: inherit;
+  height: inherit;
+  box-shadow: 0px 0px 25px lightblue;
+}
+.imgbox:hover {
+  transform: scale(1.1);
+}
+.imgbox:hover + .zoom {
+  padding-top: 1%;
+  transform: scale(1.5);
 }
 
 @keyframes funni {
-    0%   {background-color:rgb(230, 110, 110);}
-    25%  {background-color:rgb(255, 213, 0);}
-    50%  {background-color:burlywood;}
-    75%  {background-color:chocolate;}
-    100% {background-color:orange;}
-}
-.body{
-    text-align: center;
-    animation-name: funni;
-    animation-duration: 100s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    padding: 8%;
+  0% {
+    background-color: rgb(230, 110, 110);
+  }
+
+  25% {
+    background-color: rgb(255, 213, 0);
+  }
+
+  50% {
+    background-color: burlywood;
+  }
+
+  75% {
+    background-color: chocolate;
+  }
+
+  100% {
+    background-color: orange;
+  }
 }
 
-
+.body {
+  text-align: center;
+  animation-name: funni;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  padding: 8%;
+}

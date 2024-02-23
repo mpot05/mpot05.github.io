@@ -18,6 +18,26 @@ const FORDS = $("#fords-count");
 
 setInterval(stupid, 1000)
 
+setInterval(saveState, 1000)
+
+function saveState() {
+	localStorage.setItem("count", count)
+	localStorage.setItem("clickpower", clickpower)
+	localStorage.setItem("autoclick", autoclick)
+	localStorage.setItem("clickUpgrade1Cost", clickUpgrade1Cost)
+	localStorage.setItem("clickUpgrade2Cost", clickUpgrade2Cost)
+	localStorage.setItem("autoUpgrade1Cost", autoUpgrade1Cost)
+}
+
+function loadState() {
+	count = Number(localStorage.getItem("count"))
+	clickpower = Number(localStorage.getItem("clickpower"))
+	autoclick = Number(localStorage.getItem("autoclick"))
+	clickUpgrade1Cost = Number(localStorage.getItem("clickUpgrade1Cost"))
+	clickUpgrade2Cost = Number(localStorage.getItem("clickUpgrade2Cost"))
+	autoUpgrade1Cost = Number(localStorage.getItem("autoUpgrade1Cost"))
+}
+
 function stupid() {
 	stupidnum++;
 	document.getElementById('stupidID').innerHTML = stupidnum
@@ -38,6 +58,7 @@ window.onload = function () {
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
 	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
 	passiveclicks()
+	loadState()
 }
 
 function clickCookie() {

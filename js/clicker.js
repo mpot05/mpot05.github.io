@@ -10,6 +10,8 @@ let clickUpgrade2Cost = 500
 
 let autoUpgrade1Cost = 250
 
+let autoUpgrade2Cost = 1000
+
 let autoclick = 0
 
 
@@ -18,7 +20,7 @@ const FORDS = $("#fords-count");
 
 setInterval(stupid, 1000)
 
-setInterval(saveState, 100)
+setInterval(saveState, 1000)
 
 function saveState() {
 	localStorage.setItem("count", count)
@@ -27,7 +29,7 @@ function saveState() {
 	localStorage.setItem("clickUpgrade1Cost", clickUpgrade1Cost)
 	localStorage.setItem("clickUpgrade2Cost", clickUpgrade2Cost)
 	localStorage.setItem("autoUpgrade1Cost", autoUpgrade1Cost)
-
+	localStorage.setItem("autoUpgrade2Cost", autoUpgrade2Cost)
 }
 
 function loadState() {
@@ -37,6 +39,7 @@ function loadState() {
 	clickUpgrade1Cost = Number(localStorage.getItem("clickUpgrade1Cost"))
 	clickUpgrade2Cost = Number(localStorage.getItem("clickUpgrade2Cost"))
 	autoUpgrade1Cost = Number(localStorage.getItem("autoUpgrade1Cost"))
+	autoUpgrade2Cost = Number(localStorage.getItem("autoUpgrade2Cost"))
 }
 
 function stupid() {
@@ -59,6 +62,7 @@ window.onload = function () {
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
 	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
+  document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
 	passiveclicks()
 	loadState()
 }
@@ -82,11 +86,14 @@ function reset() {
 	clickUpgrade1Cost = 25;
 	clickUpgrade2Cost = 500;
 	autoUpgrade1Cost = 250;
+	autoUpgrade2Cost = 1000;
 	autoclick = 0;
 	FORDS.text(count)
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
 	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
+	document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
+
 }
 
 function clickUpgrade1() {
@@ -117,4 +124,14 @@ function autoClickUpgrade1() {
 		autoUpgrade1Cost = Math.round((autoUpgrade1Cost *= 1.25))
 		document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
 	}
+}
+
+function autoClickUpgrade2() {
+  if (count >= autoUpgrade2Cost) {
+    count -= autoUpgrade2Cost;
+    autoclick += 20;
+    FORDS.text(count)
+    autoUpgrade2Cost = Math.round((autoUpgrade2Cost *= 1.25))
+    document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
+  }
 }

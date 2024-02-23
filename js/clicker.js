@@ -81,11 +81,12 @@ function reset() {
 	clickpower = 1;
 	clickUpgrade1Cost = 25;
 	clickUpgrade2Cost = 500;
+	autoUpgrade1Cost = 250;
 	autoclick = 0;
 	FORDS.text(count)
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
-
+	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
 }
 
 function clickUpgrade1() {

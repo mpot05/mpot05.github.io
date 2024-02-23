@@ -36,10 +36,10 @@ function loadState() {
 	count = Number(localStorage.getItem("count"))
 	clickpower = Number(localStorage.getItem("clickpower"))
 	autoclick = Number(localStorage.getItem("autoclick"))
-	clickUpgrade1Cost = Number(localStorage.getItem("clickUpgrade1Cost"))
-	clickUpgrade2Cost = Number(localStorage.getItem("clickUpgrade2Cost"))
-	autoUpgrade1Cost = Number(localStorage.getItem("autoUpgrade1Cost"))
-	autoUpgrade2Cost = Number(localStorage.getItem("autoUpgrade2Cost"))
+	clickUpgrade1Cost = Number(localStorage.getItem("clickUpgrade1Cost")) > 0 ? Number(localStorage.getItem("clickUpgrade1Cost")) : 25
+	clickUpgrade2Cost = Number(localStorage.getItem("clickUpgrade2Cost")) > 0 ? Number(localStorage.getItem("clickUpgrade2Cost")) : 500
+	autoUpgrade1Cost = Number(localStorage.getItem("autoUpgrade1Cost")) > 0 ? Number(localStorage.getItem("autoUpgrade1Cost")) : 250
+	autoUpgrade2Cost = Number(localStorage.getItem("autoUpgrade2Cost")) > 0 ? Number(localStorage.getItem("autoUpgrade2Cost")) : 1000
 }
 
 function stupid() {

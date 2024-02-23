@@ -18,7 +18,7 @@ const FORDS = $("#fords-count");
 
 setInterval(stupid, 1000)
 
-setInterval(saveState, 1000)
+setInterval(saveState, 100)
 
 function saveState() {
 	localStorage.setItem("count", count)
@@ -27,6 +27,7 @@ function saveState() {
 	localStorage.setItem("clickUpgrade1Cost", clickUpgrade1Cost)
 	localStorage.setItem("clickUpgrade2Cost", clickUpgrade2Cost)
 	localStorage.setItem("autoUpgrade1Cost", autoUpgrade1Cost)
+
 }
 
 function loadState() {
@@ -54,11 +55,20 @@ function autoclicker() {
 }
 
 window.onload = function () {
+	loadState()
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
 	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
 	passiveclicks()
 	loadState()
+}
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+	//usage:
+	/*
+	sleep(2000).then(() => { code });
+	*/
 }
 
 function clickCookie() {

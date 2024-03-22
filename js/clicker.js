@@ -62,7 +62,7 @@ window.onload = function () {
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost
 	document.getElementById('autobutton1').innerHTML = "Auto Click Upgrade 1: " + autoUpgrade1Cost
-  document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
+  	document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
 	passiveclicks()
 	loadState()
 }

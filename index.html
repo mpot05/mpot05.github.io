@@ -13,37 +13,54 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
+        <script src="/js/projectPages.js" defer></script>
 
 </head>
 <html>
 
 <body class="body">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary-subtle sticky-top ">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html">MPortfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/page2.html">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/clickerpage.html">Fords clicker</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/page3.html">Testing page</a>
-                </li>
+          <a class="navbar-brand" href="#">MPortfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a id="calcApp" class="dropdown-item" href="#">Action</a></li>
+                      <li><a id="hackathon" class="dropdown-item" href="#">Another action</a></li>
+                      <li><a id="spriteKit" onclick="" class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    
+                </div>
+              </li>
             </ul>
+                
+          </div>
         </div>
-    </nav>
+      </nav>
 
 
 
     <div style="padding: 8%;">
 
         <h1>
-            <div id="header">MPortfolio</div>
+            <div id="header">Home</div>
         </h1>
         <p>
             Hello! If you've found this website, I'm assuming you're here to look at my code. If not I have no idea how
@@ -70,7 +87,6 @@
             </a>
         </div>
         <div>
-            
             <a class="alink" href="https://github.com/mpot05/FirstSpriteKit" target="_blank">
                 <img class="imgbox" src="images/spritekitimg.jpeg" alt="Spritekit" width="100" height="100">
                 <p class="zoom">
@@ -87,7 +103,7 @@
             </a>
         </div>
         <div>
-            <a class="alink" href="https://github.com/mpot05/arduinoClicker">
+            <a class="alink" href="https://github.com/mpot05/arduinoClicker" target="_blank">
                 <img class="imgbox" src="images/arduino.png" alt="arduino logo">
                 <p class="zoom">
                     Arduino Cookie Clicker
@@ -95,14 +111,14 @@
             </a>
         </div>
         <div>
-            <a class="alink" href="https://makecode.microbit.org/S13099-88584-78541-08255">
+            <a class="alink" href="https://makecode.microbit.org/S13099-88584-78541-08255" target="_blank">
                 <img class="imgbox" src="images/microbit.png" alt="microbit">
                 <p class="zoom">
                     MicroBit Cookie Clicker
                 </p>
             </a>
         </div>
-
+        <a href="/html/projectPage.html" onclick="loadCalc()">Test</a>
         <div id="score">0</div>
         <button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
         <p>

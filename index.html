@@ -21,20 +21,20 @@
 <body class="body">
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary-subtle sticky-top ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">MPortfolio</a>
+          <a class="navbar-brand" href="/index.html">MPortfolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="/html/page2.html">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="/html/clickerpage.html">Fords Clicker</a>
               </li>
               <li class="nav-item">
                 <div class="dropdown">
@@ -42,9 +42,13 @@
                       Projects
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a id="calcApp" class="dropdown-item" href="#">Action</a></li>
-                      <li><a id="hackathon" class="dropdown-item" href="#">Another action</a></li>
-                      <li><a id="spriteKit" onclick="" class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a onclick="loadCalc()" class="dropdown-item" href="/html/projectPage.html">Calculator App</a></li>
+                      <li><a onclick="loadHack()" class="dropdown-item" href="/html/projectPage.html">First Hackathon</a></li>
+                      <li><a onclick="loadSpritekit()" class="dropdown-item" href="/html/projectPage.html">SpriteKit Project</a></li>
+                      <li><a onclick="loadPortfolio()" class="dropdown-item" href="/html/projectPage.html">Portfolio App</a></li>
+                      <li><a onclick="loadArduino()" class="dropdown-item" href="/html/projectPage.html">Arduino Clicker</a></li>
+                      <li><a onclick="loadMicrobit()" class="dropdown-item" href="/html/projectPage.html">Micro Clicker</a></li>
+
                     </ul>
                     
                 </div>
@@ -70,55 +74,6 @@
             college.
             It's also my very first time using html, so this site may be questionable in quality.
         </p>
-        <div>
-            <a class="alink" href="https://github.com/mpot05/first-calculator-app" target="_blank">
-                <img class="imgbox" src="/images/calc_image.png" alt="calculator-image" width="60" height="100" />
-                <p class="zoom">
-                    The first calculator app I made (It's bad)
-                </p>
-            </a>
-        </div>
-        <div>
-            <a class="alink" href="https://github.com/mpot05/First-Hackathon" target="_blank">
-                <img class="imgbox" src="/images/hackathon-image.png" alt="hackathon-image" width="200" height="100" />
-                <p class="zoom">
-                    My first in-class Hackathon project
-                </p>
-            </a>
-        </div>
-        <div>
-            <a class="alink" href="https://github.com/mpot05/FirstSpriteKit" target="_blank">
-                <img class="imgbox" src="images/spritekitimg.jpeg" alt="Spritekit" width="100" height="100">
-                <p class="zoom">
-                    First Spritekit thing
-                </p>
-            </a>
-        </div>
-        <div>
-            <a class="alink" href="https://github.com/mpot05/MPortfolio" target="_blank">
-                <img class="imgbox" src="images/Portfolio.png" alt="Folder that says portfolio">
-                <p class="zoom">
-                    Early portfolio app
-                </p>
-            </a>
-        </div>
-        <div>
-            <a class="alink" href="https://github.com/mpot05/arduinoClicker" target="_blank">
-                <img class="imgbox" src="images/arduino.png" alt="arduino logo">
-                <p class="zoom">
-                    Arduino Cookie Clicker
-                </p>
-            </a>
-        </div>
-        <div>
-            <a class="alink" href="https://makecode.microbit.org/S13099-88584-78541-08255" target="_blank">
-                <img class="imgbox" src="images/microbit.png" alt="microbit">
-                <p class="zoom">
-                    MicroBit Cookie Clicker
-                </p>
-            </a>
-        </div>
-        <a href="/html/projectPage.html" onclick="loadCalc()">Test</a>
         <div id="score">0</div>
         <button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
         <p>
@@ -143,7 +98,7 @@
                 score.text(counter);
 
                 if (counter >= 10) {
-                    clink.text("Ford Clicker")
+                    clink.text("Fords Clicker")
                 }
             });
         </script>

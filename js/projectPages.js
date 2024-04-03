@@ -18,7 +18,7 @@ function loadSpritekit() {
     sessionStorage.setItem("SrcLink", "https://github.com/mpot05/FirstSpriteKit")
     sessionStorage.setItem("SrcImg", "/images/spritekitimg.jpeg")
     sessionStorage.setItem("Title", "Spritekit App")
-    sessionStorage.setItem("Proj_Desc", "Spritekit App")
+    sessionStorage.setItem("Proj_Desc", "This is the very first time I ever used Spritekit. I tryed to make a simple little game that could have the user go between \"levels\" that would be different areas that they would have to do things in or get around obstacles.")
 }
 
 function loadPortfolio() {

@@ -14,6 +14,8 @@ let autoUpgrade2Cost = 1000
 
 let autoclick = 0
 
+let started = false
+
 
 
 const FORDS = $("#fords-count");
@@ -53,6 +55,7 @@ function passiveclicks() {
 }
 
 function autoclicker() {
+	started = true
 	count += autoclick
 	FORDS.text(count)
 }
@@ -65,6 +68,9 @@ window.onload = function () {
   	document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
 	passiveclicks()
 	loadState()
+	if (!started) {
+		reset()
+	}
 }
 
 function sleep(ms) {
@@ -76,11 +82,13 @@ function sleep(ms) {
 }
 
 function clickCookie() {
+	started = true
 	count += clickpower;
 	FORDS.text(count)
 }
 
 function reset() {
+	started = true
 	count = 0;
 	clickpower = 1;
 	clickUpgrade1Cost = 25;
@@ -98,6 +106,7 @@ function reset() {
 
 function clickUpgrade1() {
 	if (count >= clickUpgrade1Cost) {
+		started = true
 		count -= clickUpgrade1Cost;
 		clickpower += 1;
 		FORDS.text(count)
@@ -108,6 +117,7 @@ function clickUpgrade1() {
 
 function clickUpgrade2() {
 	if (count >= clickUpgrade2Cost) {
+		started = true
 		count -= clickUpgrade2Cost;
 		clickpower += 15;
 		FORDS.text(count)
@@ -117,6 +127,7 @@ function clickUpgrade2() {
 }
 
 function autoClickUpgrade1() {
+	started = true
 	if (count >= autoUpgrade1Cost) {
 		count -= autoUpgrade1Cost;
 		autoclick += 1;
@@ -127,11 +138,12 @@ function autoClickUpgrade1() {
 }
 
 function autoClickUpgrade2() {
-  if (count >= autoUpgrade2Cost) {
-    count -= autoUpgrade2Cost;
-    autoclick += 20;
-    FORDS.text(count)
-    autoUpgrade2Cost = Math.round((autoUpgrade2Cost *= 1.25))
-    document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
-  }
+	started = true
+  	if (count >= autoUpgrade2Cost) {
+    	count -= autoUpgrade2Cost;
+    	autoclick += 20;
+    	FORDS.text(count)
+    	autoUpgrade2Cost = Math.round((autoUpgrade2Cost *= 1.25))
+    	document.getElementById('autobutton2').innerHTML = "Auto Click Upgrade 2: " + autoUpgrade2Cost
+	}
 }

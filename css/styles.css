@@ -89,4 +89,18 @@ p {
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+  font-size: large;
+}
+
+.calcButton0 {
+  height: 50px;
+  width: 100px;
+  color: white;
+  text-align: left;
+  padding-inline: 18px;
+  line-height: 50px;
+  background-color: black;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: large;
 }

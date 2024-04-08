@@ -79,3 +79,14 @@ p {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+.calcButton {
+  height: 50px;
+  width: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}

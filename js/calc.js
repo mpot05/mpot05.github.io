@@ -56,16 +56,12 @@ function ClearAll() {
 
 function percentSign() {
     if (operate == false) {
-        if (displaynum == null) {
-            displaynum = 0
-        }
+        checkNull(1);
         displaynum = Number(displaynum) / 100;
         document.getElementById("displaynum").innerHTML = displaynum;
     }
     else {
-        if (displaynum2 == null) {
-            displaynum2 = 0
-        }
+        checkNull(2);
         displaynum2 = Number(displaynum2) / 100;
         document.getElementById("displaynum").innerHTML = displaynum2;
     }
@@ -73,9 +69,21 @@ function percentSign() {
 
 function plusMinus() {
     let thing = "-"
+    checkNull(1);
+    checkNull(2);
     if (operate == false) {
-        if (Math.sign(Number(displaynum))) {
-            
+        switch (Math.sign(Number(displaynum))) {
+            case 1:
+                
+                break;
+            case -1:
+
+                break;
+            case 0:
+
+                break;
+            default:
+                break;
         }
     }
     else {
@@ -87,17 +95,13 @@ function decimal() {
     if (hasDecimal == false) {
         
         if (operate == false) {
-            if (displaynum == null) {
-                displaynum = 0
-            }
+            checkNull(1);
             displaynum = String(displaynum);
             displaynum = displaynum.concat(".");
             document.getElementById("displaynum").innerHTML = displaynum;
         }
         else {
-            if (displaynum2 == null) {
-                displaynum2 = 0
-            }
+            checkNull(2);
             displaynum2 = String(displaynum2);
             displaynum2 = displaynum2.concat(".");
             document.getElementById("displaynum").innerHTML = displaynum2;
@@ -156,4 +160,21 @@ function numer(num) {
         document.getElementById("displaynum").innerHTML = displaynum;
     }
     
+}
+
+function checkNull(num) {
+    switch (num) {
+        case 1:
+            if (displaynum == null) {
+                displaynum = 0
+            }
+            break;
+        case 2:
+            if (displaynum2 == null) {
+                displaynum2 = 0
+            }
+            break;
+        default:
+            break;
+    }
 }

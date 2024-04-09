@@ -18,7 +18,46 @@
     <title>Basic Calculator</title>
 </head>
 <body class="body">
-    <h1 style="padding-top: 5%;">Basic Calculator</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary-subtle sticky-top ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">MPortfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/html/page2.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/clickerpage.html">Fords Clicker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/calculator.html">Simple Calculator</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a onclick="loadCalc()" class="dropdown-item" href="/html/projectPage.html">Calculator App</a></li>
+                      <li><a onclick="loadHack()" class="dropdown-item" href="/html/projectPage.html">First Hackathon</a></li>
+                      <li><a onclick="loadSpritekit()" class="dropdown-item" href="/html/projectPage.html">SpriteKit Project</a></li>
+                      <li><a onclick="loadPortfolio()" class="dropdown-item" href="/html/projectPage.html">Portfolio App</a></li>
+                      <li><a onclick="loadArduino()" class="dropdown-item" href="/html/projectPage.html">Arduino Clicker</a></li>
+                      <li><a onclick="loadMicrobit()" class="dropdown-item" href="/html/projectPage.html">Micro Clicker</a></li>
+
+                    </ul>
+                    
+                </div>
+              </li>
+            </ul>
+                
+          </div>
+        </div>
+      </nav>
+    <h1 style="padding-top: 8%;">Simple Calculator</h1>
     
     <div style="font-size: xx-large" id="displaynum">
 0

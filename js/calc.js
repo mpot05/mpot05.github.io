@@ -29,6 +29,10 @@ function calculate() {
                 setHTML("You broke it")
                 break;
         }
+        document.getElementById("add").style = "background-color: gray; color: white;"
+        document.getElementById("minus").style = "background-color: gray; color: white;"
+        document.getElementById("multiply").style = "background-color: gray; color: white;"
+        document.getElementById("divide").style = "background-color: gray; color: white;"
     }
 }
 
@@ -49,6 +53,10 @@ function ClearAll() {
     hasDecimal = false;
     operate = false;
     setHTML("0");
+    document.getElementById("add").style = "background-color: gray; color: white;"
+    document.getElementById("minus").style = "background-color: gray; color: white;"
+    document.getElementById("multiply").style = "background-color: gray; color: white;"
+    document.getElementById("divide").style = "background-color: gray; color: white;"
 }
 
 function softReset(num) {
@@ -155,18 +163,22 @@ function decimal() {
 
 function addition() {
     softReset(1);
+    document.getElementById("add").style = "background-color: white; color: black;"
 }
 
 function subtraction() {
     softReset(2);
+    document.getElementById("minus").style = "background-color: white; color: black;"
 }
 
 function multiplication() {
     softReset(3);
+    document.getElementById("multiply").style = "background-color: white; color: black;"
 }
 
 function division() {
     softReset(4);
+    document.getElementById("divide").style = "background-color: white; color: black;"
 }
 
 function numer(num) {
@@ -250,4 +262,10 @@ function doesIncludeHTML(str) {
         return false;
     }
     
+}
+
+function checkForScience(num) {
+    if (String(num).length > 10) {
+        displaynum = Number(num).toExponential()
+    }
 }

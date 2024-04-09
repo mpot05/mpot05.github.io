@@ -58,40 +58,78 @@
         </div>
       </nav>
     <h1 style="padding-top: 8%;">Simple Calculator</h1>
-    
-    <div style="font-size: xx-large" id="displaynum">
+<div>
+    <div class="calcbox">
+    <div style="font-size: xx-large; color: white; text-align: end;" id="displaynum">
 0
     </div>
-    <div>
-        <div onclick="ClearAll()" id="clear" class="calcButton">AC</div>
-        <div onclick="plusMinus()" id="plusminus" class="calcButton">+/-</div>
-        <div onclick="percentSign()" id="percentage" class="calcButton">%</div>
-        <div onclick="division()" id="divide" class="calcButton">÷</div>
-    </div>
-    <div style="padding-top: 1%;">
-        <div onclick="numer(7)" class="calcButton">7</div>
-        <div onclick="numer(8)" class="calcButton">8</div>
-        <div onclick="numer(9)" class="calcButton">9</div>
-        <div onclick="multiplication()" class="calcButton">×</div>
-    </div>
-    <div style="padding: 1%;">
-        <div onclick="numer(4)" class="calcButton">4</div>
-        <div onclick="numer(5)" class="calcButton">5</div>
-        <div onclick="numer(6)" class="calcButton">6</div>
-        <div onclick="subtraction()" class="calcButton">-</div>
-    </div>
-    <div style="padding-bottom: 1%;">
-        <div onclick="numer(1)" class="calcButton">1</div>
-        <div onclick="numer(2)" class="calcButton">2</div>
-        <div onclick="numer(3)" class="calcButton">3</div>
-        <div onclick="addition()" class="calcButton">+</div>
-    </div>
-    <div>
-        <div onclick="numer(0)" class="calcButton0" style="width: 100px;">0</div>
-        <div onclick="decimal()" class="calcButton">.</div>
-        <div onclick="calculate()" class="calcButton">=</div>
-    </div>
-    
+    <div class="grid-container">
+        <div class="grid-item">
+            <div onclick="ClearAll()" id="clear" class="calcButton">AC</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="plusMinus()" id="plusminus" class="calcButton">+/-</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="percentSign()" id="percentage" class="calcButton">%</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="division()" id="divide" class="calcButton">÷</div>
+        </div>
+
+        <div class="grid-item">
+            <div onclick="numer(7)" class="calcButton">7</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(8)" class="calcButton">8</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(9)" class="calcButton">9</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="multiplication()" class="calcButton">×</div>
+        </div>
+
+        <div class="grid-item">
+            <div onclick="numer(4)" class="calcButton">4</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(5)" class="calcButton">5</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(6)" class="calcButton">6</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="subtraction()" class="calcButton">-</div>
+        </div>
+
+        <div class="grid-item">
+            <div onclick="numer(1)" class="calcButton">1</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(2)" class="calcButton">2</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(3)" class="calcButton">3</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="addition()" class="calcButton">+</div>
+        </div>
+
+        <div class="grid-item">
+            <div onclick="numer(0)" class="calcButton0" style="width: 100px;">0</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="numer(0)" class="calcButton" ></div>
+        </div>
+        <div class="grid-item">
+            <div onclick="decimal()" class="calcButton">.</div>
+        </div>
+        <div class="grid-item">
+            <div onclick="calculate()" class="calcButton">=</div>
+        </div>
+</div>
+</div>
     
 </body>
 </html>

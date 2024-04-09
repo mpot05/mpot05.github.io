@@ -86,7 +86,7 @@ p {
   color: white;
   text-align: center;
   line-height: 50px;
-  background-color: black;
+  background-color: gray;
   border-radius: 50%;
   display: inline-block;
   font-size: large;
@@ -99,8 +99,27 @@ p {
   text-align: left;
   padding-inline: 18px;
   line-height: 50px;
-  background-color: black;
+  background-color: gray;
   border-radius: 50px;
   display: inline-block;
   font-size: large;
+}
+
+.calcbox {
+  margin-inline: auto;
+  max-width: max-content; 
+  background-color: black;
+  padding: 1%;
+  border-radius: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto auto auto auto;
+  gap: 5px 5px;
+}
+
+.grid-item {
+  display: inline-grid;
 }

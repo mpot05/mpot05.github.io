@@ -11,18 +11,22 @@ function calculate() {
         switch (state) {
             case 1:
                 setHTML(Number(displaynum) + Number(displaynum2));
+                checkForScience(Number(document.getElementById("displaynum").innerHTML),1);
                 Clear()
                 break;
             case 2:
                 setHTML(Number(displaynum) - Number(displaynum2));
+                checkForScience(Number(document.getElementById("displaynum").innerHTML),1);
                 Clear()
                 break;
             case 3:
                 setHTML(Number(displaynum) * Number(displaynum2));
+                checkForScience(Number(document.getElementById("displaynum").innerHTML),1);
                 Clear()
                 break;
             case 4:
                 setHTML(Number(displaynum) / Number(displaynum2));
+                checkForScience(Number(document.getElementById("displaynum").innerHTML),1);
                 Clear()
                 break;
             default:
@@ -72,11 +76,16 @@ function percentSign() {
         checkNull(1);
         displaynum = Number(displaynum) / 100;
         setHTML(displaynum);
+        checkForScience(displaynum,1);
     }
     else {
         checkNull(2);
         displaynum2 = Number(displaynum2) / 100;
         setHTML(displaynum2);
+        checkForScience(displaynum2,2);
+    }
+    if (!(doesIncludeHTML("."))) {
+        hasDecimal = false;
     }
 }
 
@@ -110,6 +119,7 @@ function plusMinus() {
             default:
                 break;
         }
+        checkForScience(displaynum,1);
     }
     else {
         checkNull(2);
@@ -139,6 +149,7 @@ function plusMinus() {
             default:
                 break;
         }
+        checkForScience(displaynum2,2);
     }
 }
 
@@ -157,7 +168,10 @@ function decimal() {
             displaynum2 = displaynum2.concat(".");
             setHTML(displaynum2);
         }
-        hasDecimal = true
+        hasDecimal = true;
+    }
+    if (!(doesIncludeHTML("."))) {
+        hasDecimal = false;
     }
 }
 
@@ -196,6 +210,7 @@ function numer(num) {
             displaynum2 = String(displaynum2);
             displaynum2 = displaynum2.concat(String(num));
             setHTML(displaynum2);
+            checkForScience(displaynum2,2);
         }
         else if (document.getElementById("displaynum").innerHTML == "-0") {
             displaynum2 = "-" + String(num);
@@ -209,6 +224,7 @@ function numer(num) {
             displaynum2 = String(displaynum2);
             displaynum2 = displaynum2.concat(String(num));
             setHTML(displaynum2);
+            checkForScience(displaynum2,2);
         }
     }
     else {
@@ -220,6 +236,7 @@ function numer(num) {
             displaynum = String(displaynum);
             displaynum = displaynum.concat(String(num));
             setHTML(displaynum);
+            checkForScience(displaynum,1);
         }
         else if (displaynum == 0) {
             displaynum = num;
@@ -229,6 +246,7 @@ function numer(num) {
             displaynum = String(displaynum);
             displaynum = displaynum.concat(String(num));
             setHTML(displaynum);
+            checkForScience(displaynum,1);
         }   
     }
 }
@@ -264,8 +282,16 @@ function doesIncludeHTML(str) {
     
 }
 
-function checkForScience(num) {
+function checkForScience(num, num2) {
     if (String(num).length > 10) {
-        displaynum = Number(num).toExponential()
+        switch (num2) {
+            case 1:
+                setHTML(String(Number(num).toExponential(2)));
+                break;
+            case 2:
+                setHTML(String(Number(num).toExponential(2)));
+            default:
+                break;
+        }
     }
 }

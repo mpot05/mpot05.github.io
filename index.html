@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,9 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="/js/projectPages.js" defer></script>
+    <script src="/projectPages/projectPages.js" defer></script>
 </head>
 <html>
-
 <body class="body">
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary-subtle sticky-top ">
         <div class="container-fluid">
@@ -27,13 +25,13 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/html/page2.html">About Me</a>
+                <a class="nav-link" href="/aboutmePage/aboutMe.html">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/clickerpage.html">Fords Clicker</a>
+                <a class="nav-link" href="/clickerPage/clickerpage.html">Fords Clicker</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/calculator.html">Simple Calculator</a>
+                <a class="nav-link" href="/calcPage/calculator.html">Simple Calculator</a>
               </li>
               <li class="nav-item">
                 <div class="dropdown">
@@ -41,12 +39,12 @@
                       Projects
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a onclick="loadCalc()" class="dropdown-item" href="/html/projectPage.html">Calculator App</a></li>
-                      <li><a onclick="loadHack()" class="dropdown-item" href="/html/projectPage.html">First Hackathon</a></li>
-                      <li><a onclick="loadSpritekit()" class="dropdown-item" href="/html/projectPage.html">SpriteKit Project</a></li>
-                      <li><a onclick="loadPortfolio()" class="dropdown-item" href="/html/projectPage.html">Portfolio App</a></li>
-                      <li><a onclick="loadArduino()" class="dropdown-item" href="/html/projectPage.html">Arduino Clicker</a></li>
-                      <li><a onclick="loadMicrobit()" class="dropdown-item" href="/html/projectPage.html">Micro Clicker</a></li>
+                      <li><a onclick="loadCalc()" class="dropdown-item" href="/projectPages/projectPage.html">Calculator App</a></li>
+                      <li><a onclick="loadHack()" class="dropdown-item" href="/projectPages/projectPage.html">First Hackathon</a></li>
+                      <li><a onclick="loadSpritekit()" class="dropdown-item" href="/projectPages/projectPage.html">SpriteKit Project</a></li>
+                      <li><a onclick="loadPortfolio()" class="dropdown-item" href="/projectPages/projectPage.html">Portfolio App</a></li>
+                      <li><a onclick="loadArduino()" class="dropdown-item" href="/projectPages/projectPage.html">Arduino Clicker</a></li>
+                      <li><a onclick="loadMicrobit()" class="dropdown-item" href="/projectPages/projectPage.html">Micro Clicker</a></li>
 
                     </ul>
                     
@@ -57,11 +55,7 @@
           </div>
         </div>
       </nav>
-
-
-
     <div style="padding: 8%;">
-
         <h1>
             <div id="header">Home</div>
         </h1>
@@ -76,16 +70,10 @@
         <div id="score">0</div>
         <button id="button"> <img src="/images/cookie.png" alt="cookie" width="30" height="30"> </button>
         <p>
-            <a id="clink" class="alink" href="/html/clickerpage.html" target="_self"></a>
+            <a id="clink" class="alink" href="/clickerPage/clickerpage.html" target="_self"></a>
         </p>
-        
         <script>
             let counter = 0;
-
-            //   document.getElementById('button').onclick = () => {
-            //     counter = counter + 1;
-            //     document.getElementById('score').innerText = counter;
-            //   };
 
             let btn = $("#button");
 
@@ -104,5 +92,4 @@
         </script>
     </div>
 </body>
-
 </html>

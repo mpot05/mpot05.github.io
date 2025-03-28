@@ -41,10 +41,3 @@ function loadMicrobit() {
     sessionStorage.setItem("Title", "Microbit Clicker")
     sessionStorage.setItem("Proj_Desc", "This is my 2nd physical programming project. I had a much harder time working with microbits than with arduino. This was mostly due to the lack of tutorial videos for it in comparison to an arduino board. Anyways, it was a bit nicer to program since microbits allow you to use block code which was simple but also only allowed a simpler implementation.")
 }
-
-window.onload = function() {
-    document.getElementById("Image").src = sessionStorage.getItem("SrcImg")
-    document.getElementById("Link").href = sessionStorage.getItem("SrcLink")
-    document.getElementById("Title").innerText = sessionStorage.getItem("Title")
-    document.getElementById("Proj_Desc").innerText = sessionStorage.getItem("Proj_Desc")
-}

@@ -61,5 +61,13 @@
             Page failed to load
         </p>
     </div>
+    <script>
+        window.onload = function() {
+          document.getElementById("Image").src = sessionStorage.getItem("SrcImg")
+          document.getElementById("Link").href = sessionStorage.getItem("SrcLink")
+          document.getElementById("Title").innerText = sessionStorage.getItem("Title")
+          document.getElementById("Proj_Desc").innerText = sessionStorage.getItem("Proj_Desc")
+        }
+    </script>
 </body>
 </html>

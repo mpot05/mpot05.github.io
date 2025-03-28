@@ -60,7 +60,7 @@ function autoclicker() {
 	FORDS.text(count)
 }
 
-window.onload = function () {
+window.onload = function() {
 	loadState()
 	document.getElementById('button1').innerHTML = "Manual Click Upgrade 1: " + clickUpgrade1Cost
 	document.getElementById('button2').innerHTML = "Manual Click Upgrade 2: " + clickUpgrade2Cost

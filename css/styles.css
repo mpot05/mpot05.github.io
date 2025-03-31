@@ -1,7 +1,11 @@
 p {
-  color: black;
+  color: white;
   text-align: center;
   font-style: initial;
+}
+
+h1 {
+  color: white;
 }
 
 .zoom {
@@ -16,7 +20,7 @@ p {
 }
 
 .alink:visited {
-  color: black;
+  color: white;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -38,7 +42,7 @@ p {
   transition: all 0.5s;
   width: inherit;
   height: inherit;
-  box-shadow: 0px 0px 25px lightblue;
+  box-shadow: 0px 0px 50px lightblue;
 }
 
 .imgbox:hover {
@@ -50,34 +54,10 @@ p {
   transform: scale(1.5);
 }
 
-@keyframes funni {
-  0% {
-    background-color: rgb(230, 110, 110);
-  }
-
-  25% {
-    background-color: rgb(255, 213, 0);
-  }
-
-  50% {
-    background-color: burlywood;
-  }
-
-  75% {
-    background-color: chocolate;
-  }
-
-  100% {
-    background-color: orange;
-  }
-}
-
 .body {
   text-align: center;
-  animation-name: funni;
-  animation-duration: 100s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  color: black;
+  background-color: black;
 }
 
 .calcButton {
@@ -120,6 +100,7 @@ p {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  box-shadow: 0px 0px 35px lightblue;
 }
 
 .grid-container {
